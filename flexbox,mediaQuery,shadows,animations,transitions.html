@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSS-Advancecd-Topics</title>
+    <style>
+        :root{
+            --custom-variable : green;
+        }
+        .container{
+            height: 500px;
+            width: 600px;
+            background-color: antiquewhite;
+            border-style: solid;
+            
+
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .box1{
+            border-style: solid;
+            border-color:brown;
+            border-width: 5px;
+            width: 300px;
+            height: 300px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .box2{
+            border-style: dashed;
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+        
+        }
+        #txt{
+            border-style:solid;
+
+            box-shadow: 5px 5px 2px aquamarine;
+
+        }
+        #txt2{
+            border-style:solid;
+            box-shadow: 5px 5px 2px var(--custom-variable);
+
+        }
+
+        .animation{
+            display: block;
+            background-color: blueviolet;
+            height: 50px;
+            width: 50px;
+
+            position: relative;
+            animation-name: animate;
+            animation-duration: 3s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear ;
+
+
+            transition: all;
+            transition-property: all;
+            transition-duration: 5s;
+            transition-timing-function: ease;
+
+            
+
+        }
+        .animation:hover{
+            transform: rotate(45deg);
+            transform: skew(45deg);
+            height: 100px;
+            width:100px;
+            background-color: red;
+        }
+        @keyframes animate{
+            0%{
+                top:0px;
+                left:0px;
+            }
+            50%{
+                top:50px;
+            }
+            100%{
+                top:0px;
+                left:360px;
+            }
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1">
+            <p id="txt">
+                First Text
+            </p>
+            <p id="txt2">
+                Second Text
+            </p>
+        </div>
+        <div class="box2">
+        </div>
+    </div>
+    <br/>
+    <div class="animation">
+
+    </div>
+</body>
+</html>
